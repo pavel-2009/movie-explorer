@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    min-width: 320px;
+    /* min-width: 320px; */
     margin: 0;
     padding: 20px 12px 92px;
     background:
@@ -35,6 +35,5 @@ button {
 main {
     display: grid;
     gap: 28px;
-    max-width: 430px;
     margin: 0 auto;
 }
