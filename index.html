@@ -1,175 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Movie Explorer</title>
+        <link rel="preconnect" href="https://image.tmdb.org">
+        <link rel="preconnect" href="https://api.iconify.design">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
+        <header class="app-header">
             <div class="head">
-                <div class="title">
-                    <p class="title__first">Movie</p>
-                    <p class="title__second">Explorer</p>
-                </div>
-                <svg class="search__icon"> <!-- Fill later --> </svg>
+                <a class="title" href="#" aria-label="Movie Explorer">
+                    <span class="title__first">Movie</span>
+                    <span class="title__second">Explorer</span>
+                </a>
+                <button class="icon-button" aria-label="Поиск">
+                    <img class="icon-button__icon" src="https://api.iconify.design/lucide/search.svg?color=%23f9fafb" alt="">
+                </button>
             </div>
-            <nav>
-                <div class="nav-list">
-                    <div class="nav-list__item">
-                        <svg class="nav-list__icon"> <!-- Fill later --> </svg>
-                        <p class="nav-list__text">Главная</p>
-                    </div>
-                    <div class="nav-list__item">
-                        <svg class="nav-list__icon"> <!-- Fill later --> </svg>
-                        <p class="nav-list__text">Фильмы</p>
-                    </div>
-                    <div class="nav-list__item">
-                        <svg class="nav-list__icon"> <!-- Fill later --> </svg>
-                        <p class="nav-list__text">Мой список</p>
-                    </div>
-                    <div class="nav-list__item">
-                        <svg class="nav-list__icon"> <!-- Fill later --> </svg>
-                        <p class="nav-list__text">Профиль</p>
-                    </div>
-                </div>
-            </nav>
         </header>
 
         <main>
-            <!-- PREMIER SECTION -->
-            <section class="premier">
-                <div class="premier__scroll">
-                    <svg class="premier__scroll-icon"> <!-- Fill later --> </svg>
-                    <svg class="premier__scroll-icon"> <!-- Fill later --> </svg>
-                    <svg class="premier__scroll-icon"> <!-- Fill later --> </svg>
-                    <svg class="premier__scroll-icon"> <!-- Fill later --> </svg>
-                    <svg class="premier__scroll-icon"> <!-- Fill later --> </svg>
-                </div>
+            <section class="premier" aria-labelledby="premier-title">
                 <article class="premier__item">
-                    <img src="images/dune2.jpg" alt="Дюна 2" class="premier__item-image">
+                    <img src="https://image.tmdb.org/t/p/w780/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Постер фильма Дюна: Часть вторая" class="premier__item-image">
+                    <div class="premier__item-overlay"></div>
                     <div class="premier__item__info">
                         <p class="premier__item-premier">ПРЕМЬЕРА</p>
-                        <p class="premier__item-title">Дюна 2</p>
+                        <h1 class="premier__item-title" id="premier-title">Дюна 2</h1>
                         <div class="premier__item-info">
                             <div class="premier__item-info__rating">
-                                <svg class="premier__item-info__rating-icon"> <!-- Fill later --> </svg>
-                                <p class="premier__item-info__rating-text">8.5</p>
+                                <img class="premier__item-info__rating-icon" src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">
+                                <span class="premier__item-info__rating-text">8.7</span>
                             </div>
-                            <p class="premier__item-info__year">2024</p>
-                            <p class="premier__item-info__duration">2ч 15мин</p>
+                            <span>2024</span>
+                            <span>2ч 46м</span>
                         </div>
-                        <div class="premier__item-watch">
-                            <svg class="premier__item-watch-icon"> <!-- Fill later --> </svg>
-                            <p class="premier__item-watch-text">Смотреть</p>
-                        </div>
+                        <a class="premier__item-watch" href="#">
+                            <img class="premier__item-watch-icon" src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt="">
+                            <span class="premier__item-watch-text">Смотреть</span>
+                        </a>
+                    </div>
+                    <div class="premier__scroll" aria-label="Слайды">
+                        <span class="premier__scroll-dot premier__scroll-dot--active"></span>
+                        <span class="premier__scroll-dot"></span>
+                        <span class="premier__scroll-dot"></span>
+                        <span class="premier__scroll-dot"></span>
                     </div>
                 </article>
             </section>
 
-            <!-- MOVIE LIST SECTION -->
-            <section class="movie-list">
-                <div class="movie-list__title">
-                    <p class="movie-list__title-text">Популярное</p>
-                    <div class="movie-list__title-link">
-                        <p class="movie-list__title-link__text">Смотреть все</p>
-                        <svg class="movie-list__title-link__icon"> <!-- Fill later --> </svg>
-                    </div>
+            <section class="movie-list" aria-labelledby="popular-title">
+                <div class="section-title">
+                    <h2 class="section-title__text" id="popular-title">Популярное</h2>
+                    <a class="section-title__link" href="#">
+                        <span>Смотреть все</span>
+                        <img src="https://api.iconify.design/lucide/chevron-right.svg?color=%23ef4444" alt="">
+                    </a>
                 </div>
                 <div class="movie-list__items">
-                    <article class="movie-list__item">
-                        <div class="movie-list__item-rating">
-                            <svg class="movie-list__item-rating-icon"> <!-- Fill later --> </svg>
-                            <p class="movie-list__item-rating-text">8.5</p>
-                        </div>
-                        <div class="movie-list__item-info">
-                            <img src="images/movie1.jpg" alt="Оппенгеймер" class="movie-list__item-image">
-                            <p class="movie-list__item-title">Оппенгеймер</p>
-                        </div>
+                    <article class="movie-card">
+                        <img src="https://image.tmdb.org/t/p/w342/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Постер фильма Оппенгеймер" class="movie-card__image">
+                        <div class="movie-card__rating"><img src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">8.6</div>
+                        <h3 class="movie-card__title">Оппенгеймер</h3>
                     </article>
-                    <article class="movie-list__item">
-                        <div class="movie-list__item-rating">
-                            <svg class="movie-list__item-rating-icon"> <!-- Fill later --> </svg>
-                            <p class="movie-list__item-rating-text">8.5</p>
-                        </div>
-                        <div class="movie-list__item-info">
-                            <img src="images/movie1.jpg" alt="Оппенгеймер" class="movie-list__item-image">
-                            <p class="movie-list__item-title">Оппенгеймер</p>
-                        </div>
+                    <article class="movie-card">
+                        <img src="https://image.tmdb.org/t/p/w342/bQ2ywkchIiaKLSEaMrcT6e29f91.jpg" alt="Постер фильма Годзилла и Конг: Новая империя" class="movie-card__image">
+                        <div class="movie-card__rating"><img src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">7.1</div>
+                        <h3 class="movie-card__title">Годзилла и Конг</h3>
                     </article>
-                    <article class="movie-list__item">
-                        <div class="movie-list__item-rating">
-                            <svg class="movie-list__item-rating-icon"> <!-- Fill later --> </svg>
-                            <p class="movie-list__item-rating-text">8.5</p>
-                        </div>
-                        <div class="movie-list__item-info">
-                            <img src="images/movie1.jpg" alt="Оппенгеймер" class="movie-list__item-image">
-                            <p class="movie-list__item-title">Оппенгеймер</p>
-                        </div>
+                    <article class="movie-card">
+                        <img src="https://image.tmdb.org/t/p/w342/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Постер мультфильма Кунг-фу Панда 4" class="movie-card__image">
+                        <div class="movie-card__rating"><img src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">7.4</div>
+                        <h3 class="movie-card__title">Кунг-фу Панда 4</h3>
                     </article>
-                    <article class="movie-list__item">
-                        <div class="movie-list__item-rating">
-                            <svg class="movie-list__item-rating-icon"> <!-- Fill later --> </svg>
-                            <p class="movie-list__item-rating-text">8.5</p>
-                        </div>
-                        <div class="movie-list__item-info">
-                            <img src="images/movie1.jpg" alt="Оппенгеймер" class="movie-list__item-image">
-                            <p class="movie-list__item-title">Оппенгеймер</p>
-                        </div>
+                    <article class="movie-card">
+                        <img src="https://image.tmdb.org/t/p/w342/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg" alt="Постер фильма Дюна: Часть вторая" class="movie-card__image">
+                        <div class="movie-card__rating"><img src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">8.7</div>
+                        <h3 class="movie-card__title">Дюна 2</h3>
                     </article>
                 </div>
             </section>
 
-            <!-- CONTINUE WATCHING SECTION -->
-            <section class="continue-watching">
-                <div class="movie-list__title">
-                    <p class="movie-list__title-text">Продолжить просмотр</p>
-                    <div class="movie-list__title-link">
-                        <p class="movie-list__title-link__text">Смотреть все</p>
-                        <svg class="movie-list__title-link__icon"> <!-- Fill later --> </svg>
-                    </div>
+            <section class="continue-watching" aria-labelledby="continue-title">
+                <div class="section-title">
+                    <h2 class="section-title__text" id="continue-title">Продолжить просмотр</h2>
+                    <a class="section-title__link" href="#">
+                        <span>Смотреть все</span>
+                        <img src="https://api.iconify.design/lucide/chevron-right.svg?color=%23ef4444" alt="">
+                    </a>
                 </div>
-                <article class="continue-watching__item">
-                    <img src="images/movie1.jpg" alt="Оппенгеймер" class="continue-watching__item-image">
-                    <div class="continue-watching__item-info-info">
-                        <svg class="continue-watching__item-info-icon"> <!-- Fill later --> </svg>
-                        <div class="continue-watching__item-info">
-                            <p class="continue-watching__item-title">Оппенгеймер</p>
-                            <p class="continue-watching__item-duration-left"> Осталось  2ч 15мин</p>
-                            <div class="continue-watching__item-progress">
-                                <div class="continue-watching__item-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="continue-watching__item">
-                    <img src="images/movie1.jpg" alt="Оппенгеймер" class="continue-watching__item-image">
-                    <div class="continue-watching__item-info-info">
-                        <svg class="continue-watching__item-info-icon"> <!-- Fill later --> </svg>
-                        <div class="continue-watching__item-info">
-                            <p class="continue-watching__item-title">Оппенгеймер</p>
-                            <p class="continue-watching__item-duration-left"> Осталось  2ч 15мин</p>
-                            <div class="continue-watching__item-progress">
-                                <div class="continue-watching__item-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="continue-watching__item">
-                    <img src="images/movie1.jpg" alt="Оппенгеймер" class="continue-watching__item-image">
-                    <div class="continue-watching__item-info-info">
-                        <svg class="continue-watching__item-info-icon"> <!-- Fill later --> </svg>
-                        <div class="continue-watching__item-info">
-                            <p class="continue-watching__item-title">Оппенгеймер</p>
-                            <p class="continue-watching__item-duration-left"> Осталось  2ч 15мин</p>
-                            <div class="continue-watching__item-progress">
-                                <div class="continue-watching__item-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <div class="continue-watching__list">
+                    <article class="continue-card">
+                        <img src="https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Кадр из фильма Интерстеллар" class="continue-card__image">
+                        <button class="continue-card__play" aria-label="Смотреть Интерстеллар"><img src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt=""></button>
+                        <div class="continue-card__content"><h3>Интерстеллар</h3><p>2ч 49м осталось</p><span class="continue-card__progress"><span style="width: 62%"></span></span></div>
+                    </article>
+                    <article class="continue-card">
+                        <img src="https://image.tmdb.org/t/p/w780/8rpDcsfLJypbO6vREc0547VKqEv.jpg" alt="Кадр из фильма Во все тяжкие" class="continue-card__image">
+                        <button class="continue-card__play" aria-label="Смотреть Во все тяжкие"><img src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt=""></button>
+                        <div class="continue-card__content"><h3>Во все тяжкие</h3><p>Сезон 4, серия 7</p><span class="continue-card__progress"><span style="width: 78%"></span></span></div>
+                    </article>
+                </div>
             </section>
         </main>
+
+        <nav class="bottom-nav" aria-label="Основная навигация">
+            <a class="bottom-nav__item bottom-nav__item--active" href="#"><img src="https://api.iconify.design/solar/home-2-bold.svg?color=%23ef4444" alt=""><span>Главная</span></a>
+            <a class="bottom-nav__item" href="#"><img src="https://api.iconify.design/solar/film-frame-linear.svg?color=%239ca3af" alt=""><span>Фильмы</span></a>
+            <a class="bottom-nav__item" href="#"><img src="https://api.iconify.design/solar/star-linear.svg?color=%239ca3af" alt=""><span>Мой список</span></a>
+            <a class="bottom-nav__item" href="#"><img src="https://api.iconify.design/solar/user-linear.svg?color=%239ca3af" alt=""><span>Профиль</span></a>
+        </nav>
     </body>
 </html>
