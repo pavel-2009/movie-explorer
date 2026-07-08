@@ -1,0 +1,12 @@
+/* Root Variables */
+:root {
+    --primary: #EF4444;
+    --accent: #F89E0B;
+
+    --background: #1B1F17;
+    --surface: #111827;
+    --card: #1F2937;
+    --border: #595a5d;
+
+    --text-primary: #F9FAFB;
+}
