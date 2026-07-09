@@ -15,6 +15,11 @@
     background: transparent;
 }
 
+.head .menu-button {
+    display: none;
+    cursor: pointer;
+}
+
 .title {
     display: grid;
     gap: 0;

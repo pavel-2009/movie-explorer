@@ -11,6 +11,13 @@
     <body>
         <header class="app-header">
             <div class="head">
+                <div class="menu-button" aria-label="Меню">
+                    <svg class="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 6H21" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 18H21" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <a class="title" href="#" aria-label="Movie Explorer">
                     <span class="title__first">Movie</span>
                     <span class="title__second">Explorer</span>
@@ -30,16 +37,23 @@
                         <p class="premier__item-premier">ПРЕМЬЕРА</p>
                         <h1 class="premier__item-title" id="premier-title">Дюна 2</h1>
                         <div class="premier__item-info">
-                            <div class="premier__item-info__rating">
+                            <div class="premier__item-info__rating info-item">
                                 <img class="premier__item-info__rating-icon" src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="">
                                 <span class="premier__item-info__rating-text">8.7</span>
                             </div>
-                            <span>2024</span>
-                            <span>2ч 46м</span>
+                            <span class="info-item">2024</span>
+                            <span class="info-item">2ч 46м</span>
+                            <span class="info-item last added">Фантастика, боевик</span>
                         </div>
+                    </div>
+                    <div class="premier__item-buttons">
                         <a class="premier__item-watch" href="#">
                             <img class="premier__item-watch-icon" src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt="">
                             <span class="premier__item-watch-text">Смотреть</span>
+                        </a>
+                        <a class="premier__item-watch info" href="#">
+                            <img class="premier__item-info-icon" src="https://api.iconify.design/solar/info-bold.svg?color=%23ffffff" alt="">
+                            <span class="premier__item-info-text">Подробнее</span>
                         </a>
                     </div>
                     <div class="premier__scroll" aria-label="Слайды">
@@ -112,5 +126,9 @@
             <a class="bottom-nav__item" href="#"><img src="https://api.iconify.design/solar/star-linear.svg?color=%239ca3af" alt=""><span>Мой список</span></a>
             <a class="bottom-nav__item" href="#"><img src="https://api.iconify.design/solar/user-linear.svg?color=%239ca3af" alt=""><span>Профиль</span></a>
         </nav>
+
+        <aside class="aside-nav">
+
+        </aside>
     </body>
 </html>
