@@ -10,4 +10,8 @@
     .info-item.added {
         display: inline;
     }
+
+    .premier__item-watch.info {
+        display: inline-flex;
+    }
 }
