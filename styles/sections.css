@@ -67,15 +67,10 @@ section {
     font-weight: 700;
 }
 
-.info-item::after {
+.info-item + .info-item::before {
     content: "•";
-    margin-left: 10px;
+    margin-right: 8px;
     color: var(--text-muted);
-}
-
-.info-item.last::after {
-    content: "";
-    margin-left: 0;
 }
 
 .info-item.added {
