@@ -14,4 +14,8 @@
     .premier__item-watch.info {
         display: inline-flex;
     }
+
+    .bottom-nav {
+        display: none;
+    }
 }
