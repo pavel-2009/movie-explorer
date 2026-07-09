@@ -67,6 +67,21 @@ section {
     font-weight: 700;
 }
 
+.info-item::after {
+    content: "•";
+    margin-left: 10px;
+    color: var(--text-muted);
+}
+
+.info-item.last::after {
+    content: "";
+    margin-left: 0;
+}
+
+.info-item.added {
+    display: none;
+}
+
 .premier__item-info__rating-icon,
 .premier__item-watch-icon {
     width: 14px;

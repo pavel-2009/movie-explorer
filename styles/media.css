@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .app-header {
+        padding: 0 20px;
+    }
+
+    .head .menu-button {
+        display: block;
+    }
+
+    .info-item.added {
+        display: inline;
+    }
+}
