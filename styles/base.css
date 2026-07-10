@@ -3,12 +3,16 @@ html {
     color-scheme: dark;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 20px 12px 92px;
     background:
         radial-gradient(circle at top right, rgba(239, 68, 68, 0.13), transparent 34%),
-        linear-gradient(180deg, var(--background) 0%, #05080d 100%);
+        linear-gradient(180deg, var(--background) 0%, color-mix(in srgb, var(--background), #000 26%) 100%);
     color: var(--text-primary);
     font-family: var(--font-main);
 }
@@ -33,4 +37,15 @@ main {
     display: grid;
     gap: 28px;
     margin: 0 auto;
+}
+
+.theme-toggle {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }

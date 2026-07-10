@@ -23,3 +23,102 @@
         display: none;
     }
 }
+
+@media (min-width: 1200px) {
+    body {
+        min-height: 100vh;
+        padding: 28px 36px 36px 292px;
+    }
+
+    .app-header {
+        max-width: 1120px;
+        margin-bottom: 22px;
+    }
+
+    .app-header .title,
+    .app-header .menu-button {
+        display: none;
+    }
+
+    .head {
+        justify-content: center;
+    }
+
+    .head::before {
+        width: min(520px, 50vw);
+        padding: 0 22px 0 54px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        background: url("https://api.iconify.design/lucide/search.svg?color=%239ca3af") 22px 50% / 18px no-repeat, rgba(17, 24, 39, 0.72);
+        color: var(--text-muted);
+        content: "Поиск фильмов, сериалов, людей...";
+        font-size: 14px;
+        line-height: 52px;
+        box-shadow: 0 14px 50px rgba(0, 0, 0, 0.16);
+    }
+
+    body:has(.theme-toggle:checked) .head::before {
+        border-color: var(--border);
+        background-color: rgba(255, 255, 255, 0.82);
+    }
+
+    .head .icon-button {
+        position: fixed;
+        top: 52px;
+        right: 64px;
+    }
+
+    .aside-nav {
+        display: flex;
+    }
+
+    main {
+        max-width: 1120px;
+        gap: 44px;
+    }
+
+    .premier__item {
+        height: 430px;
+        padding: 52px;
+        border-radius: 22px;
+    }
+
+    .premier__item__info {
+        top: 0;
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .premier__item-title {
+        font-size: 58px;
+    }
+
+    .premier__scroll {
+        right: 42px;
+        bottom: 34px;
+    }
+
+    .movie-list__items,
+    .continue-watching__list {
+        grid-auto-flow: initial;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 22px;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+
+    .movie-card__image {
+        width: 100%;
+        height: 230px;
+    }
+
+    .continue-watching__list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .continue-card,
+    .continue-card__image {
+        height: 150px;
+    }
+}
