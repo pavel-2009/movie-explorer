@@ -41,31 +41,12 @@
     }
 
     .head {
-        justify-content: center;
+        justify-content: flex-end;
     }
 
-    .head::before {
-        width: min(520px, 50vw);
-        padding: 0 22px 0 54px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        background: url("https://api.iconify.design/lucide/search.svg?color=%239ca3af") 22px 50% / 18px no-repeat, rgba(17, 24, 39, 0.72);
-        color: var(--text-muted);
-        content: "Поиск фильмов, сериалов, людей...";
-        font-size: 14px;
-        line-height: 52px;
-        box-shadow: 0 14px 50px rgba(0, 0, 0, 0.16);
-    }
-
-    body:has(.theme-toggle:checked) .head::before {
+    body:has(.theme-toggle:checked) {
         border-color: var(--border);
         background-color: rgba(255, 255, 255, 0.82);
-    }
-
-    .head .icon-button {
-        position: fixed;
-        top: 52px;
-        right: 64px;
     }
 
     .aside-nav {
