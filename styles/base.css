@@ -18,6 +18,14 @@ body {
     transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
+body:has(.theme-element:checked) {
+    background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--primary) 7%, transparent), transparent 34%),
+        linear-gradient(180deg, var(--day-background) 0%, color-mix(in srgb, var(--day-background), #E2E8F0 22%) 100%);
+    color: var(--day-text-primary);
+    color-scheme: light;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -40,7 +48,7 @@ main {
     margin: 0 auto;
 }
 
-.theme-toggle {
+.theme-element {
     position: fixed;
     opacity: 0;
     pointer-events: none;

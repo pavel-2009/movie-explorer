@@ -16,6 +16,12 @@
     backdrop-filter: blur(18px);
 }
 
+body:has(.theme-element:checked) .bottom-nav {
+    border-color: rgba(15, 23, 42, 0.09);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 18px 54px rgba(15, 23, 42, 0.1);
+}
+
 .bottom-nav__item {
     display: grid;
     gap: 5px;
@@ -23,6 +29,10 @@
     color: var(--text-muted);
     font-size: 10px;
     font-weight: 700;
+}
+
+body:has(.theme-element:checked) .bottom-nav__item {
+    color: var(--day-text-muted);
 }
 
 .bottom-nav__item img {
@@ -51,6 +61,12 @@
     backdrop-filter: blur(20px);
 }
 
+body:has(.theme-element:checked) .aside-nav {
+    border-color: rgba(15, 23, 42, 0.09);
+    background: rgba(248, 250, 252, 0.96);
+    box-shadow: 0 18px 54px rgba(15, 23, 42, 0.1);
+}
+
 .aside-nav__logo {
     display: grid;
     margin: 0 8px 56px;
@@ -76,10 +92,20 @@
     font-weight: 700;
 }
 
+body:has(.theme-element:checked) .aside-nav__link {
+    color: var(--day-text-muted);
+}
+
 .aside-nav__link--active,
 .aside-nav__link:hover {
     background: var(--panel-link-hover);
     color: var(--text-primary);
+}
+
+body:has(.theme-element:checked) .aside-nav__link--active,
+body:has(.theme-element:checked) .aside-nav__link:hover {
+    background: rgba(241, 245, 249, 0.95);
+    color: var(--day-text-primary);
 }
 
 .aside-nav__link img {
@@ -95,6 +121,10 @@
     margin-top: auto;
     padding: 22px 8px 0;
     border-top: 1px solid var(--panel-border);
+}
+
+body:has(.theme-element:checked) .aside-nav__profile {
+    border-color: rgba(15, 23, 42, 0.09);
 }
 
 .aside-nav__profile > img:first-child {
@@ -116,6 +146,10 @@
     margin-top: 2px;
     color: var(--text-muted);
     font-size: 11px;
+}
+
+body:has(.theme-element:checked) .aside-nav__profile span {
+    color: var(--day-text-muted);
 }
 
 .aside-nav,
@@ -151,9 +185,19 @@
     transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
-body:has(.theme-toggle:checked) .theme-switch__sun,
-body:not(:has(.theme-toggle:checked)) .theme-switch__moon {
+body:has(.theme-element:checked) .theme-switch span {
+    border-color: rgba(15, 23, 42, 0.1);
+    background: rgba(255, 255, 255, 0.96);
+}
+
+body:not(:has(.theme-element:checked)) .theme-switch__moon {
     background: var(--primary);
     box-shadow: var(--panel-switch-shadow);
+    transform: translateY(-2px);
+}
+
+body:has(.theme-element:checked) .theme-switch__sun {
+    background: var(--primary);
+    box-shadow: 0 10px 24px rgba(243, 107, 107, 0.14);
     transform: translateY(-2px);
 }
