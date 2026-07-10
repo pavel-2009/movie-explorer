@@ -22,7 +22,7 @@
 
 .title {
     display: grid;
-    gap: 0;
+    /* gap: 0; */
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 0.9;
