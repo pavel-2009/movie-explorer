@@ -65,6 +65,10 @@ section {
     font-size: 12px;
 }
 
+.premier__item-description {
+    display: none;
+}
+
 .premier__item-info__rating {
     display: flex;
     gap: 4px;

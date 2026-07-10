@@ -70,6 +70,11 @@
         min-height: 100%;
     }
 
+    .premier__item-description {
+        display: block;
+        margin-top: 12px;
+    }
+
     .premier__item-title {
         font-size: 58px;
     }
