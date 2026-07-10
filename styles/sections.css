@@ -11,10 +11,10 @@ section {
     height: 320px;
     padding: 18px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
     border-radius: 20px;
     background: var(--surface);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    box-shadow: var(--shadow-soft);
 }
 
 .premier__item-image {
@@ -77,6 +77,17 @@ section {
     font-weight: 700;
 }
 
+.premier__item-description:has(.theme-toggle:checked),
+.premier__item-info:has(.theme-toggle:checked) {
+    color: var(--day-text-muted);
+    background: color-mix(in srgb, var(--day-surface) 92%, transparent);
+}
+
+.premier__item-title:has(.theme-toggle:checked) {
+    color: var(--day-text-primary);
+    background: color-mix(in srgb, var(--day-surface) 92%, transparent);
+}
+
 .info-item + .info-item::before {
     content: "•";
     margin-right: 8px;
@@ -118,8 +129,9 @@ section {
 
 .premier__item-watch.info {
     display: none;
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
 }
 
 .premier__scroll {
@@ -218,6 +230,7 @@ section {
 
 .movie-card__title {
     margin: 8px 0 0;
+    color: var(--text-primary);
     font-size: 12px;
     line-height: 1.25;
 }
@@ -230,15 +243,17 @@ section {
     position: relative;
     min-height: 138px;
     overflow: hidden;
+    border: 1px solid var(--border);
     border-radius: 14px;
     background: var(--card);
+    box-shadow: var(--shadow-soft);
 }
 
 .continue-card::after {
     position: absolute;
     inset: 0;
     content: "";
-    background: linear-gradient(180deg, transparent 20%, rgba(3, 7, 18, 0.9) 100%);
+    background: var(--continue-overlay);
 }
 
 .continue-card__image {
