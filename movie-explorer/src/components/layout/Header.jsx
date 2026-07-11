@@ -1,4 +1,4 @@
-function Header() {
+export function Header() {
     return (
         <header class="app-header">
             <div class="head">

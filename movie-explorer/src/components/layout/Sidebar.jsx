@@ -1,4 +1,4 @@
-function Sidebar() {
+export function Sidebar() {
     return (
         <aside class="aside-nav" aria-label="Боковая навигация">
             <a class="aside-nav__logo title" href="#" aria-label="Movie Explorer">

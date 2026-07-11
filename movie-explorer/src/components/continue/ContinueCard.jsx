@@ -1,4 +1,4 @@
-function ContinueCard({ title, progress, imageUrl, watchedPercentage }) {
+export function ContinueCard({ title, progress, imageUrl, watchedPercentage }) {
     return (
         <article class="continue-card">
             <img src={imageUrl} alt={`Кадр из сериала ${title}`} class="continue-card__image"/>
@@ -9,7 +9,7 @@ function ContinueCard({ title, progress, imageUrl, watchedPercentage }) {
                 <h3>{title}</h3>
                 <p>{progress}</p>
                 <span class="continue-card__progress">
-                    <span style="width: {watchedPercentage}%"></span>
+                    <span style={{ width: `${watchedPercentage}%` }}></span>
                 </span>
             </div>
         </article>

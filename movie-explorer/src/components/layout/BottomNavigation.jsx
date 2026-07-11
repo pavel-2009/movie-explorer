@@ -1,4 +1,4 @@
-function BottomNavigation() {
+export function BottomNavigation() {
     return (
         <nav class="bottom-nav" aria-label="Основная навигация">
             <a class="bottom-nav__item bottom-nav__item--active" href="#"><img src="https://api.iconify.design/solar/home-2-bold.svg?color=%23ef4444" alt=""/><span>Главная</span></a>

@@ -1,4 +1,4 @@
-function Hero() {
+export function Hero() {
     return (
         <section class="premier" aria-labelledby="premier-title">
                 <article class="premier__item">

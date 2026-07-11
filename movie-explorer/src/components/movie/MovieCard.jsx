@@ -1,4 +1,4 @@
-function MovieCard({ title, rating, imageUrl }) {
+export function MovieCard({ title, rating, imageUrl }) {
     return (
         <article class="movie-card">
             <img src={imageUrl} alt={`Постер фильма ${title}`} class="movie-card__image"/>

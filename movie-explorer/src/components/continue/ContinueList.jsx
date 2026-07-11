@@ -1,6 +1,6 @@
 import { ContinueCard } from "./ContinueCard";
 
-function ContinueList({ continueWatching }) {
+export function ContinueList({ continueWatching }) {
     return (
         <section class="continue-watching" aria-labelledby="continue-title">
             <div class="section-title">

@@ -1,6 +1,6 @@
 import { MovieCard } from './MovieCard';
 
-function MovieList({ movies }) {
+export function MovieList({ movies }) {
     return (
         <section class="movie-list" aria-labelledby="popular-title">
                 <div class="section-title">
