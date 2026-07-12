@@ -22,7 +22,6 @@
 
 .title {
     display: grid;
-    /* gap: 0; */
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 0.9;
@@ -62,4 +61,3 @@ body:has(.theme-element:checked) .icon-button {
     color: currentColor;
     transition: color var(--transition);
 }
-
