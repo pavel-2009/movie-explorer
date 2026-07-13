@@ -23,7 +23,6 @@ export function Hero() {
                                 <span class="premier__item-watch-text">Смотреть</span>
                             </a>
                             <a class="premier__item-watch info" href="#">
-                                <img class="premier__item-info-icon" src="https://api.iconify.design/solar/info-bold.svg?color=%23ffffff" alt="Подробнее"/>
                                 <span class="premier__item-info-text">Подробнее</span>
                             </a>
                         </div>
