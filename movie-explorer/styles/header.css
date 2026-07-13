@@ -72,31 +72,34 @@ body:has(.theme-element:checked) .icon-button {
 }
 
 .search-trigger {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    position: relative;
+    display: grid;
+    flex: 0 0 38px;
+    width: 38px;
     margin-left: auto;
+    place-items: center;
 }
 
 .search-form {
+    position: absolute;
+    top: 50%;
+    left: -232px;
+    z-index: 1;
     display: flex;
     align-items: center;
-    width: 0;
-    max-width: 0;
+    width: 220px;
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
-    transform: translateX(8px) scale(0.96);
+    transform: translateY(-50%) translateX(8px) scale(0.96);
     transform-origin: right center;
-    transition: width 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .search-form--visible {
-    width: 220px;
-    max-width: 220px;
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(0) scale(1);
+    transform: translateY(-50%) translateX(0) scale(1);
 }
 
 .search-form__input {
