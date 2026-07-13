@@ -1,16 +1,117 @@
-# React + Vite
+# 📋 Movie Explorer — TODO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔧 Исправления
 
-Currently, two official plugins are available:
+- [ ] Удалить `Head.jsx` и перенести все метатеги в `index.html`.
+- [ ] Проверить, что везде используется `htmlFor` вместо `for`.
+- [ ] Проверить, что во всех `.map()` используется уникальный `key`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# 🚀 Функционал
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## React Router
 
-## Expanding the ESLint configuration
+- [ ] Настроить React Router.
+- [ ] Главная страница (`/`).
+- [ ] Страница фильма (`/movie/:id`).
+- [ ] Избранное (`/favorites`).
+- [ ] Профиль (`/profile`).
+- [ ] Страница 404.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Поиск
+
+- [ ] Добавить состояние поиска (`useState`).
+- [ ] Реализовать поиск по названию фильма.
+- [ ] Показывать сообщение, если ничего не найдено.
+
+---
+
+## Фильтрация
+
+- [ ] Добавить фильтрацию (по жанрам, категориям или типу контента).
+- [ ] Совместить фильтрацию с поиском.
+
+---
+
+## Избранное
+
+- [ ] Добавить возможность добавлять/удалять фильм из избранного.
+- [ ] Отображать список избранных фильмов на отдельной странице.
+
+---
+
+## Theme
+
+- [ ] Сделать переключение темы через React.
+- [ ] Сохранять выбранную тему.
+
+---
+
+## Local Storage
+
+Сохранять:
+
+- [ ] тему;
+- [ ] избранное;
+- [ ] (опционально) прогресс просмотра.
+
+---
+
+## Hero
+
+- [ ] Передавать данные Hero через props вместо статической разметки.
+
+---
+
+## MovieCard
+
+Добавить недостающие данные:
+
+- [ ] id;
+- [ ] year;
+- [ ] genres;
+- [ ] duration;
+- [ ] favorite.
+
+---
+
+## Continue Watching
+
+- [ ] Передавать объект фильма целиком (`movie`) вместо отдельных props.
+
+---
+
+## Movie Page
+
+- [ ] Создать страницу фильма.
+- [ ] Загружать фильм по `id`.
+- [ ] Показывать подробную информацию.
+
+---
+
+## Loading
+
+- [ ] Добавить экран загрузки (Loader или Skeleton).
+
+---
+
+# ✨ Финальная полировка
+
+- [ ] Проверить hover-состояния.
+- [ ] Проверить focus-состояния.
+- [ ] Проверить accessibility (`alt`, `aria-label`).
+- [ ] Проверить отсутствие предупреждений React.
+- [ ] Проверить проект на всех брейкпоинтах.
+
+---
+
+# ❌ Не входит в текущий этап
+
+- [ ] Backend.
+- [ ] API.
+- [ ] Авторизация.
+- [ ] Redux.
+- [ ] Next.js.
