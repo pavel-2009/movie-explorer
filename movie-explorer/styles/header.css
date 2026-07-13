@@ -61,7 +61,6 @@ body:has(.theme-element:checked) .icon-button {
     color: currentColor;
     transition: color var(--transition);
 }
-<<<<<<< HEAD
 
 .icon-button:hover {
     background: var(--primary);
@@ -87,11 +86,9 @@ body:has(.theme-element:checked) .icon-button {
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
-    transform: translateX(10px) scale(0.94);
+    transform: translateX(8px) scale(0.96);
     transform-origin: right center;
-    transition: width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-                opacity 0.28s ease,
-                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: width 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
 .search-form--visible {
@@ -105,15 +102,14 @@ body:has(.theme-element:checked) .icon-button {
 .search-form__input {
     width: 100%;
     min-width: 0;
-    padding: 14px 15px;
+    padding: 12px 15px;
     border: 1px solid var(--panel-border);
     border-radius: 999px;
     background: var(--panel-bg);
     color: var(--text-primary);
     font-size: 14px;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    backdrop-filter: blur(12px);
-    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .search-form__input:focus,
@@ -121,8 +117,5 @@ body:has(.theme-element:checked) .icon-button {
 .search-form__input:hover {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3), 0 10px 28px rgba(59, 130, 246, 0.16);
-    transform: translateY(-1px);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
 }
-=======
->>>>>>> f738e88f5e5f9f51b6506b6774e36467d8abdd14
