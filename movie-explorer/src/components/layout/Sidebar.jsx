@@ -7,6 +7,7 @@ import bellIcon from '../../assets/icons/bell.svg'
 import listCheckIcon from '../../assets/icons/list-check.svg'
 import playCircleIcon from '../../assets/icons/play-circle.svg'
 import chevronDownIcon from '../../assets/icons/chevron-down.svg'
+import { Link } from 'react-router-dom'
 
 export function Sidebar() {
     return (
@@ -16,13 +17,34 @@ export function Sidebar() {
                 <span className="title__second">Explorer</span>
             </a>
             <div className="aside-nav__menu">
-                <a className="aside-nav__link aside-nav__link--active" href="#"><img src={homeIcon} alt="" /><span>Главная</span></a>
-                <a className="aside-nav__link" href="#"><img src={filmIcon} alt="" /><span>Фильмы</span></a>
-                <a className="aside-nav__link" href="#"><img src={calendarIcon} alt="" /><span>Сериалы</span></a>
-                <a className="aside-nav__link" href="#"><img src={starOutlineIcon} alt="" /><span>Популярное</span></a>
-                <a className="aside-nav__link" href="#"><img src={bellIcon} alt="" /><span>Новинки</span></a>
-                <a className="aside-nav__link" href="#"><img src={listCheckIcon} alt="" /><span>Мой список</span></a>
-                <a className="aside-nav__link" href="#"><img src={playCircleIcon} alt="" /><span>Трейлеры</span></a>
+                <Link className="aside-nav__link aside-nav__link--active" to="/">
+                    <img src={homeIcon} alt="" />
+                    <span>Главная</span>
+                </Link>
+                <Link className="aside-nav__link" to="/films">
+                    <img src={filmIcon} alt="" />
+                    <span>Фильмы</span>
+                </Link>
+                <Link className="aside-nav__link" to="/series">
+                    <img src={calendarIcon} alt="" />
+                    <span>Сериалы</span>
+                </Link>
+                <Link className="aside-nav__link" to="/popular">
+                    <img src={starOutlineIcon} alt="" />
+                    <span>Популярное</span>
+                </Link>
+                <Link className="aside-nav__link" to="/new">
+                    <img src={bellIcon} alt="" />
+                    <span>Новинки</span>
+                </Link>
+                <Link className="aside-nav__link" to="/my-list">
+                    <img src={listCheckIcon} alt="" />
+                    <span>Мой список</span>
+                </Link>
+                <Link className="aside-nav__link" to="/trailers">
+                    <img src={playCircleIcon} alt="" />
+                    <span>Трейлеры</span>
+                </Link>
             </div>
             <div className="aside-nav__profile">
                 <img src={avatarImage} alt="Аватар пользователя" />
