@@ -1,6 +1,7 @@
 import dunePoster from '../../assets/images/posters/dune.svg'
 import playIcon from '../../assets/icons/play.svg'
 import starIcon from '../../assets/icons/star.svg'
+import { Link } from 'react-router-dom'
 
 export function Hero() {
     return (
@@ -26,9 +27,9 @@ export function Hero() {
                                 <img className="premier__item-watch-icon" src={playIcon} alt="Смотреть"/>
                                 <span className="premier__item-watch-text">Смотреть</span>
                             </a>
-                            <a className="premier__item-watch info" href="#">
-                                <span class="premier__item-info-text">Подробнее</span>
-                            </a>
+                            <Link className="premier__item-watch info" to="/movie/dune-2">
+                                <span className="premier__item-info-text">Подробнее</span>
+                            </Link>
                         </div>
                     </div>
                     <div className="premier__scroll" aria-label="Слайды">
