@@ -1,4 +1,4 @@
-import { MovieCard } from './MovieCard';
+import { MovieCard } from './MovieCard'
 
 export function MovieList({ movies }) {
     return (
@@ -13,9 +13,11 @@ export function MovieList({ movies }) {
                 <div className="movie-list__items">
                     {movies.map((movie) => (
                         <MovieCard
+                            key={movie.slug}
                             title={movie.title}
                             rating={movie.rating}
                             imageUrl={movie.imageUrl}
+                            slug={movie.slug}
                         />
                     ))}
                 </div>

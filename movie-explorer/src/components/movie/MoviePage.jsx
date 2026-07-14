@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom'
+import { movies } from '../../data/homePageContent'
+
 const defaultMovie = {
   title: 'Дюна: Часть вторая',
   rating: 8.7,
@@ -30,7 +33,10 @@ const defaultMovie = {
   ],
 }
 
-export function MoviePage({ movie = defaultMovie }) {
+export function MoviePage() {
+  const { slug } = useParams()
+  const movie = movies.find((item) => item.slug === slug) ?? defaultMovie
+
   return (
     <main className="main-content movie-page" aria-labelledby="movie-page-title">
       <section className="movie-page__hero">
