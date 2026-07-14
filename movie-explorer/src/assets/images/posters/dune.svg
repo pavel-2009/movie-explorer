@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" role="img" aria-label="Постер Дюна: Часть вторая">
+  <rect width="500" height="750" fill="#111827"/>
+  <rect x="24" y="24" width="452" height="702" rx="28" fill="#1f2937" stroke="#f59e0b" stroke-width="6"/>
+  <circle cx="250" cy="290" r="130" fill="#f59e0b" opacity="0.2"/>
+  <path d="M180 220h140l-24 96h-92z" fill="#f59e0b"/>
+  <path d="M188 340h124l-26 126H214z" fill="#fbbf24"/>
+  <text x="250" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#f9fafb">DUNE: PART II</text>
+  <text x="250" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#d1d5db">Фантастика · Приключения</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" role="img" aria-label="Постер Блэйд Раннер 2049">
+  <rect width="500" height="750" fill="#111827"/>
+  <rect x="24" y="24" width="452" height="702" rx="28" fill="#1f2937" stroke="#ef4444" stroke-width="6"/>
+  <circle cx="250" cy="288" r="128" fill="#ef4444" opacity="0.18"/>
+  <path d="M220 184h60l20 118-50 44-50-44z" fill="#ef4444"/>
+  <rect x="176" y="332" width="148" height="108" rx="18" fill="#f87171"/>
+  <text x="250" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#f9fafb">BLADE RUNNER</text>
+  <text x="250" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#d1d5db">2049 · НФ / Детектив</text>
+</svg>

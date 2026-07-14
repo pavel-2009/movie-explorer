@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" role="img" aria-label="Постер для серии">
+  <rect width="500" height="750" fill="#0f172a"/>
+  <rect x="24" y="24" width="452" height="702" rx="28" fill="#111827" stroke="#8b5cf6" stroke-width="6"/>
+  <circle cx="250" cy="300" r="130" fill="#8b5cf6" opacity="0.2"/>
+  <path d="M216 222l128 78-128 78z" fill="#8b5cf6"/>
+  <text x="250" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#f9fafb">CONTINUE</text>
+  <text x="250" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#d1d5db">Сериал · Новая серия</text>
+</svg>

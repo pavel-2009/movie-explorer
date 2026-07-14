@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" role="img" aria-label="Постер Интерстеллар">
+  <rect width="500" height="750" fill="#020617"/>
+  <rect x="24" y="24" width="452" height="702" rx="28" fill="#0f172a" stroke="#38bdf8" stroke-width="6"/>
+  <circle cx="250" cy="270" r="140" fill="#38bdf8" opacity="0.2"/>
+  <path d="M186 188c36-42 92-42 128 0-14 38-18 74-18 120 0 56-14 98-44 122-26-22-42-64-42-122 0-46 2-82-24-120z" fill="#38bdf8"/>
+  <text x="250" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#f8fafc">INTERSTELLAR</text>
+  <text x="250" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#cbd5e1">SCI-FI · DRAMA</text>
+</svg>

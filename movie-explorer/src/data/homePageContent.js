@@ -1,10 +1,16 @@
+import dunePoster from '../assets/images/posters/dune.svg'
+import interstellarPoster from '../assets/images/posters/interstellar.svg'
+import matrixPoster from '../assets/images/posters/matrix.svg'
+import bladeRunnerPoster from '../assets/images/posters/blade-runner.svg'
+import continuePoster from '../assets/images/posters/continue.svg'
+
 export const movies = [
   {
     slug: 'dune-part-two',
     title: 'Дюна: Часть вторая',
     rating: 8.7,
-    imageUrl: 'https://image.tmdb.org/t/p/w500/1.jpg',
-    backdrop: 'https://image.tmdb.org/t/p/w1280/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg',
+    imageUrl: dunePoster,
+    backdrop: dunePoster,
     genre: 'Фантастика, приключения, драма',
     duration: '2ч 46м',
     description:
@@ -28,8 +34,8 @@ export const movies = [
     slug: 'interstellar',
     title: 'Интерстеллар',
     rating: 8.6,
-    imageUrl: 'https://image.tmdb.org/t/p/w500/2.jpg',
-    backdrop: 'https://image.tmdb.org/t/p/w1280/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
+    imageUrl: interstellarPoster,
+    backdrop: interstellarPoster,
     genre: 'Научная фантастика, драма',
     duration: '2ч 49м',
     description:
@@ -49,8 +55,8 @@ export const movies = [
     slug: 'the-matrix',
     title: 'Матрица',
     rating: 8.7,
-    imageUrl: 'https://image.tmdb.org/t/p/w500/3.jpg',
-    backdrop: 'https://image.tmdb.org/t/p/w1280/fNG7i7RqMErkcqhohV2a6cVJAJ5.jpg',
+    imageUrl: matrixPoster,
+    backdrop: matrixPoster,
     genre: 'Боевик, фантастика',
     duration: '2ч 16м',
     description:
@@ -70,8 +76,8 @@ export const movies = [
     slug: 'blade-runner-2049',
     title: 'Блэйд Раннер 2049',
     rating: 8.0,
-    imageUrl: 'https://image.tmdb.org/t/p/w500/4.jpg',
-    backdrop: 'https://image.tmdb.org/t/p/w1280/jJcH0hCAf2e2Qjz0sMwk6R6qfK0.jpg',
+    imageUrl: bladeRunnerPoster,
+    backdrop: bladeRunnerPoster,
     genre: 'Научная фантастика, детектив',
     duration: '2ч 43м',
     description:
@@ -90,7 +96,7 @@ export const movies = [
 ]
 
 export const continueWatching = [
-  { title: 'Сериал 1', progress: 'Сезон 2, Серия 5', imageUrl: 'https://image.tmdb.org/t/p/w500/5.jpg', watchedPercentage: 50 },
-  { title: 'Сериал 2', progress: 'Сезон 1, Серия 10', imageUrl: 'https://image.tmdb.org/t/p/w500/6.jpg', watchedPercentage: 80 },
-  { title: 'Сериал 3', progress: 'Сезон 3, Серия 2', imageUrl: 'https://image.tmdb.org/t/p/w500/7.jpg', watchedPercentage: 30 },
+  { title: 'Сериал 1', progress: 'Сезон 2, Серия 5', imageUrl: continuePoster, watchedPercentage: 50 },
+  { title: 'Сериал 2', progress: 'Сезон 1, Серия 10', imageUrl: continuePoster, watchedPercentage: 80 },
+  { title: 'Сериал 3', progress: 'Сезон 3, Серия 2', imageUrl: continuePoster, watchedPercentage: 30 },
 ]

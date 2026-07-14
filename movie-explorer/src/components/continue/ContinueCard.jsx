@@ -1,9 +1,11 @@
+import playIcon from '../../assets/icons/play.svg'
+
 export function ContinueCard({ title, progress, imageUrl, watchedPercentage }) {
     return (
         <article className="continue-card">
             <img src={imageUrl} alt={`Кадр из сериала ${title}`} className="continue-card__image"/>
             <button className="continue-card__play" aria-label={`Смотреть ${title}`}>
-                <img src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt=""/>
+                <img src={playIcon} alt=""/>
             </button>
             <div className="continue-card__content">
                 <h3>{title}</h3>

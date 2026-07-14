@@ -1,4 +1,6 @@
 import { useParams } from 'react-router-dom'
+import playIcon from '../../assets/icons/play.svg'
+import starIcon from '../../assets/icons/star.svg'
 import { movies } from '../../data/homePageContent'
 
 const defaultMovie = {
@@ -47,14 +49,14 @@ export function MoviePage() {
           <h1 className="movie-page__title" id="movie-page-title">{movie.title}</h1>
           <div className="movie-page__meta" aria-label="Информация о фильме">
             <span className="movie-page__rating">
-              <img src="https://api.iconify.design/solar/star-bold.svg?color=%23f89e0b" alt="" />
+              <img src={starIcon} alt="" />
               {movie.rating}
             </span>
             <span>{movie.genre}</span>
             <span>{movie.duration}</span>
           </div>
           <a className="movie-page__watch" href="#watch">
-            <img src="https://api.iconify.design/solar/play-bold.svg?color=%23ffffff" alt="" />
+            <img src={playIcon} alt="" />
             Смотреть
           </a>
         </div>

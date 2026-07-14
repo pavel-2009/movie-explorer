@@ -1,4 +1,5 @@
 import { MovieCard } from './MovieCard'
+import chevronRightIcon from '../../assets/icons/chevron-right.svg'
 
 export function MovieList({ movies }) {
     return (
@@ -7,7 +8,7 @@ export function MovieList({ movies }) {
                     <h2 className="section-title__text" id="popular-title">Популярное</h2>
                     <a className="section-title__link" href="#">
                         <span>Смотреть все</span>
-                        <img src="https://api.iconify.design/lucide/chevron-right.svg?color=%23ef4444" alt="Смотреть все"/>
+                        <img src={chevronRightIcon} alt="Смотреть все"/>
                     </a>
                 </div>
                 <div className="movie-list__items">
