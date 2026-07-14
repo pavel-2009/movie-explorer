@@ -1,0 +1,280 @@
+.movie-page {
+    gap: 24px;
+}
+
+.movie-page__hero {
+    position: relative;
+    min-height: min(680px, calc(100vh - 140px));
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+}
+
+body:has(.theme-element:checked) .movie-page__hero {
+    border-color: var(--day-border);
+    background: var(--day-surface);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.movie-page__hero:hover {
+    border-color: color-mix(in srgb, var(--primary), transparent 45%);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.movie-page__backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), filter var(--transition);
+}
+
+.movie-page__hero:hover .movie-page__backdrop {
+    transform: scale(1.04);
+}
+
+.movie-page__shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(2, 6, 13, 0.02) 0%, rgba(2, 6, 13, 0.22) 42%, rgba(2, 6, 13, 0.9) 100%),
+        linear-gradient(90deg, rgba(2, 6, 13, 0.82) 0%, rgba(2, 6, 13, 0.08) 72%);
+}
+
+body:has(.theme-element:checked) .movie-page__shade {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.1) 40%, rgba(15, 23, 42, 0.72) 100%),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.05) 72%);
+}
+
+.movie-page__summary {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1;
+    display: grid;
+    max-width: 680px;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent);
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    box-shadow: 0 14px 30px rgba(2, 6, 13, 0.14);
+    backdrop-filter: blur(14px);
+}
+
+body:has(.theme-element:checked) .movie-page__summary {
+    border-color: color-mix(in srgb, var(--day-border) 72%, transparent);
+    background: color-mix(in srgb, var(--day-surface) 88%, transparent);
+    color: var(--day-text-primary);
+}
+
+.movie-page__eyebrow,
+.movie-page__section-kicker {
+    margin: 0;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.movie-page__title {
+    max-width: 580px;
+    margin: 0;
+    font-size: clamp(38px, 9vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+
+.movie-page__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+body:has(.theme-element:checked) .movie-page__meta {
+    color: var(--day-text-muted);
+}
+
+.movie-page__meta > span + span::before {
+    content: "•";
+    margin-right: 10px;
+    color: currentColor;
+}
+
+.movie-page__rating,
+.movie-page__watch {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 800;
+}
+
+.movie-page__rating {
+    color: var(--text-primary);
+}
+
+body:has(.theme-element:checked) .movie-page__rating {
+    color: var(--day-text-primary);
+}
+
+.movie-page__rating img,
+.movie-page__watch img {
+    width: 15px;
+    height: 15px;
+}
+
+.movie-page__watch {
+    width: max-content;
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 13px;
+    transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.movie-page__watch:hover,
+.movie-page__watch:focus-visible {
+    box-shadow: 0 14px 30px rgba(239, 68, 68, 0.35);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.movie-page__details {
+    display: grid;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    box-shadow: var(--shadow-soft);
+}
+
+body:has(.theme-element:checked) .movie-page__details {
+    border-color: var(--day-border);
+    background: var(--day-surface);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.movie-page__details h2,
+.movie-page__details p,
+.movie-page__actor h3 {
+    margin: 0;
+}
+
+.movie-page__details h2 {
+    margin-top: 5px;
+    font-size: clamp(24px, 5vw, 36px);
+    letter-spacing: -0.04em;
+}
+
+.movie-page__details > p {
+    max-width: 760px;
+    color: color-mix(in srgb, var(--text-primary), transparent 18%);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+body:has(.theme-element:checked) .movie-page__details > p {
+    color: color-mix(in srgb, var(--day-text-primary), transparent 18%);
+}
+
+.movie-page__cast-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 132px;
+    gap: 14px;
+    overflow-x: auto;
+    margin: 0 -12px;
+    padding: 0 12px 8px;
+    scrollbar-width: none;
+}
+
+.movie-page__cast-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-page__actor {
+    display: grid;
+    gap: 10px;
+    transition: transform var(--transition), filter var(--transition);
+}
+
+.movie-page__actor:hover {
+    transform: translateY(-4px);
+}
+
+.movie-page__actor img {
+    width: 132px;
+    height: 176px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.16);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--transition);
+}
+
+.movie-page__actor:hover img {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-hover);
+}
+
+.movie-page__actor h3 {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .movie-page__summary {
+        right: auto;
+        bottom: 32px;
+        left: 32px;
+        padding: 24px;
+    }
+
+    .movie-page__details {
+        grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+        gap: 32px;
+        padding: 28px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .movie-page {
+        gap: 36px;
+    }
+
+    .movie-page__hero {
+        min-height: 620px;
+        border-radius: 28px;
+    }
+
+    .movie-page__summary {
+        bottom: 44px;
+        left: 44px;
+    }
+
+    .movie-page__cast-list {
+        grid-auto-columns: 156px;
+        gap: 18px;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+
+    .movie-page__actor img {
+        width: 156px;
+        height: 208px;
+    }
+}
