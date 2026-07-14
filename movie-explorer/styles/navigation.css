@@ -114,15 +114,15 @@ body:has(.theme-element:checked) .aside-nav__link:hover {
 }
 
 .aside-nav__profile {
-    display: grid;
-    grid-template-columns: 42px 1fr 16px;
+    display: flex;
     gap: 12px;
     border-radius: 12px;
     align-items: center;
-    /* margin-top: auto; */
+    justify-content: space-between;
     padding: 22px 8px 0;
     border-top: 1px solid var(--panel-border);
     cursor: pointer;
+    padding: 12px 18px;
 }
 
 .aside-nav__profile:hover {
