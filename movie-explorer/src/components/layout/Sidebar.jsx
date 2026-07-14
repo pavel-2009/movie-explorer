@@ -46,11 +46,11 @@ export function Sidebar() {
                     <span>Трейлеры</span>
                 </Link>
             </div>
-            <div className="aside-nav__profile">
+            <Link className="aside-nav__profile" to="/profile">
                 <img src={avatarImage} alt="Аватар пользователя" />
                 <div><strong>Алексей</strong><span>Премиум ★</span></div>
                 <img src={chevronDownIcon} alt="" />
-            </div>
+            </Link>
             <label className="theme-switch" htmlFor="theme-toggle"><span className="theme-switch__sun">☀</span><span className="theme-switch__moon">☾</span></label>
         </aside>
     )

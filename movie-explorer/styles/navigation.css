@@ -117,10 +117,18 @@ body:has(.theme-element:checked) .aside-nav__link:hover {
     display: grid;
     grid-template-columns: 42px 1fr 16px;
     gap: 12px;
+    border-radius: 12px;
     align-items: center;
-    margin-top: auto;
+    /* margin-top: auto; */
     padding: 22px 8px 0;
     border-top: 1px solid var(--panel-border);
+    cursor: pointer;
+}
+
+.aside-nav__profile:hover {
+    background: var(--panel-link-hover);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 body:has(.theme-element:checked) .aside-nav__profile {
