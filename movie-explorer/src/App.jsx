@@ -6,6 +6,7 @@ import { MainContent } from './components/layout/MainContent'
 import { Sidebar } from './components/layout/Sidebar'
 import { Theme } from './components/layout/Theme'
 import { MoviePage } from './components/movie/MoviePage'
+import { MoviePlayer } from './components/movie/MoviePlayer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/movie/:slug" element={<MoviePage />} />
+        <Route path="/watch/:slug" element={<MoviePlayer />} />
       </Routes>
       <BottomNavigation />
     </BrowserRouter>

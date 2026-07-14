@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import playIcon from '../../assets/icons/play.svg'
 import starIcon from '../../assets/icons/star.svg'
 import { movies } from '../../data/homePageContent'
@@ -55,10 +55,10 @@ export function MoviePage() {
             <span>{movie.genre}</span>
             <span>{movie.duration}</span>
           </div>
-          <a className="movie-page__watch" href="#watch">
+          <Link className="movie-page__watch" to={`/watch/${slug}`}>
             <img src={playIcon} alt="" />
             Смотреть
-          </a>
+          </Link>
         </div>
       </section>
 
