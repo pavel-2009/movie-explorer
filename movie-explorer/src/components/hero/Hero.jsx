@@ -2,7 +2,7 @@ import dunePoster from '../../assets/images/posters/dune.svg'
 import playIcon from '../../assets/icons/play.svg'
 import starIcon from '../../assets/icons/star.svg'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const defaultSlides = [
     {
@@ -42,8 +42,10 @@ const defaultSlides = [
 
 export function Hero({ posters }) {
     const [activeSlide, setActiveSlide] = useState(1)
-    const slides = Array.isArray(posters) && posters.length > 0 ? posters : defaultSlides
-    const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]]
+    const [isInstantMove, setIsInstantMove] = useState(false)
+    const slides = useMemo(() => (Array.isArray(posters) && posters.length > 0 ? posters : defaultSlides), [posters])
+    const extendedSlides = useMemo(() => [slides[slides.length - 1], ...slides, slides[0]], [slides])
+    const visibleSlide = (activeSlide - 1 + slides.length) % slides.length
 
     useEffect(() => {
         if (slides.length <= 1) return
@@ -55,22 +57,25 @@ export function Hero({ posters }) {
         return () => window.clearInterval(intervalId)
     }, [slides.length])
 
-    useEffect(() => {
+
+    const handleTransitionEnd = () => {
         if (activeSlide !== extendedSlides.length - 1) return
 
-        const timeoutId = window.setTimeout(() => {
-            setActiveSlide(1)
-        }, 700)
+        setIsInstantMove(true)
+        setActiveSlide(1)
 
-        return () => window.clearTimeout(timeoutId)
-    }, [activeSlide, extendedSlides.length])
+        window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => setIsInstantMove(false))
+        })
+    }
 
     return (
         <section className="premier" aria-labelledby="premier-title">
             <div className="premier__window">
                 <div
-                    className="posters_list"
+                    className={`posters_list${isInstantMove ? ' posters_list--instant' : ''}`}
                     style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+                    onTransitionEnd={handleTransitionEnd}
                 >
                     {extendedSlides.map((slide, index) => (
                         <article
@@ -105,6 +110,17 @@ export function Hero({ posters }) {
                         </article>
                     ))}
                 </div>
+                {slides.length > 1 && (
+                    <div className="premier__scroll" aria-label="Индикатор слайдов премьеры">
+                        {slides.map((slide, index) => (
+                            <span
+                                key={slide.id ?? index}
+                                className={`premier__scroll-dot${index === visibleSlide ? ' premier__scroll-dot--active' : ''}`}
+                                aria-current={index === visibleSlide ? 'true' : undefined}
+                            />
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     )
