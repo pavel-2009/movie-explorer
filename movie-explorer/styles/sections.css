@@ -3,7 +3,18 @@ section {
     overflow: hidden;
 }
 
-
+@keyframes premierFade {
+    /* Сперва плавно появляется справа */
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    /* В конце - плавно перетекает влево */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .premier__item {
     position: relative;
@@ -23,6 +34,7 @@ section {
 }
 
 .premier__item--active {
+    animation: premierFade 700ms ease both;
     transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(0);
 }
