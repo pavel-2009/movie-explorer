@@ -8,6 +8,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 0 0 100vw;
+    width: 100vw;
     height: 320px;
     padding: 18px;
     overflow: hidden;
@@ -15,6 +17,13 @@ section {
     border-radius: 20px;
     background: var(--surface);
     box-shadow: var(--shadow-soft);
+}
+
+.premier__window {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    overflow: hidden;
 }
 
 body:has(.theme-element:checked) .premier__item {
@@ -237,11 +246,18 @@ body:has(.theme-element:checked) .premier__item-watch.info {
 
 .movie-card {
     position: relative;
+    width: 100%;
+}
+
+.movie-card__link {
+    display: block;
+    width: 100%;
 }
 
 .movie-card__image {
-    width: 132px;
-    height: 198px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 16px 34px rgba(15, 23, 42, 0.16);
