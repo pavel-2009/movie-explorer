@@ -58,38 +58,33 @@ export function Hero({ posters }) {
     return (
         <section className="premier" aria-labelledby="premier-title">
             <div className="premier__window">
-                {slides.map((slide, index) => (
-                    <article
-                        key={slide.id ?? index}
-                        className={`premier__item${index === activeSlide ? ' premier__item--active' : ''}`}
-                    >
-                        <img src={slide.image} alt={slide.alt} className="premier__item-image" />
-                        <div className="premier__item-overlay"></div>
-                        <div className="premier__item__info">
-                            <p className="premier__item-premier">ПРЕМЬЕРА</p>
-                            <h1 className="premier__item-title" id="premier-title">{slide.title}</h1>
-                            <p className="premier__item-description">{slide.description}</p>
-                            <div className="premier__item-info">
-                                <div className="premier__item-info__rating info-item">
-                                    <img className="premier__item-info__rating-icon" src={starIcon} alt="Рейтинг" />
-                                    <span className="premier__item-info__rating-text">8.7</span>
-                                </div>
-                                <span className="info-item">{slide.year}</span>
-                                <span className="info-item">{slide.duration}</span>
-                                <span className="info-item last added">{slide.genre}</span>
+                <article key={currentSlide.id ?? activeSlide} className="premier__item premier__item--active">
+                    <img src={currentSlide.image} alt={currentSlide.alt} className="premier__item-image" />
+                    <div className="premier__item-overlay"></div>
+                    <div className="premier__item__info">
+                        <p className="premier__item-premier">ПРЕМЬЕРА</p>
+                        <h1 className="premier__item-title" id="premier-title">{currentSlide.title}</h1>
+                        <p className="premier__item-description">{currentSlide.description}</p>
+                        <div className="premier__item-info">
+                            <div className="premier__item-info__rating info-item">
+                                <img className="premier__item-info__rating-icon" src={starIcon} alt="Рейтинг" />
+                                <span className="premier__item-info__rating-text">8.7</span>
                             </div>
-                            <div className="premier__item-buttons">
-                                <a className="premier__item-watch" href="#">
-                                    <img className="premier__item-watch-icon" src={playIcon} alt="Смотреть" />
-                                    <span className="premier__item-watch-text">Смотреть</span>
-                                </a>
-                                <Link className="premier__item-watch info" to={slide.link}>
-                                    <span className="premier__item-info-text">Подробнее</span>
-                                </Link>
-                            </div>
+                            <span className="info-item">{currentSlide.year}</span>
+                            <span className="info-item">{currentSlide.duration}</span>
+                            <span className="info-item last added">{currentSlide.genre}</span>
                         </div>
-                    </article>
-                ))}
+                        <div className="premier__item-buttons">
+                            <a className="premier__item-watch" href="#">
+                                <img className="premier__item-watch-icon" src={playIcon} alt="Смотреть" />
+                                <span className="premier__item-watch-text">Смотреть</span>
+                            </a>
+                            <Link className="premier__item-watch info" to={currentSlide.link}>
+                                <span className="premier__item-info-text">Подробнее</span>
+                            </Link>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     )
