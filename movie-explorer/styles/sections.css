@@ -3,17 +3,10 @@ section {
     overflow: hidden;
 }
 
-@keyframes premierFade {
-    /* Сперва плавно появляется справа */
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    /* В конце - плавно перетекает влево */
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.posters_list {
+    display: flex;
+    width: 100%;
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .premier__item {
@@ -31,12 +24,6 @@ section {
     border-radius: 20px;
     background: var(--surface);
     box-shadow: var(--shadow-soft);
-}
-
-.premier__item--active {
-    animation: premierFade 700ms ease both;
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(0);
 }
 
 .premier__window {
