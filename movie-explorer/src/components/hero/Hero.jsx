@@ -41,18 +41,29 @@ const defaultSlides = [
 ]
 
 export function Hero({ posters }) {
-    const [activeSlide, setActiveSlide] = useState(0)
+    const [activeSlide, setActiveSlide] = useState(1)
     const slides = Array.isArray(posters) && posters.length > 0 ? posters : defaultSlides
+    const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]]
 
     useEffect(() => {
         if (slides.length <= 1) return
 
         const intervalId = window.setInterval(() => {
-            setActiveSlide((prev) => (prev + 1) % slides.length)
+            setActiveSlide((prev) => prev + 1)
         }, 3000)
 
         return () => window.clearInterval(intervalId)
     }, [slides.length])
+
+    useEffect(() => {
+        if (activeSlide !== extendedSlides.length - 1) return
+
+        const timeoutId = window.setTimeout(() => {
+            setActiveSlide(1)
+        }, 700)
+
+        return () => window.clearTimeout(timeoutId)
+    }, [activeSlide, extendedSlides.length])
 
     return (
         <section className="premier" aria-labelledby="premier-title">
@@ -61,9 +72,9 @@ export function Hero({ posters }) {
                     className="posters_list"
                     style={{ transform: `translateX(-${activeSlide * 100}%)` }}
                 >
-                    {slides.map((slide, index) => (
+                    {extendedSlides.map((slide, index) => (
                         <article
-                            key={slide.id ?? index}
+                            key={`${slide.id ?? index}-${index}`}
                             className="premier__item"
                         >
                             <img src={slide.image} alt={slide.alt} className="premier__item-image" />
