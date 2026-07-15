@@ -46,16 +46,18 @@ export function Hero({ posters }) {
     const slides = useMemo(() => (Array.isArray(posters) && posters.length > 0 ? posters : defaultSlides), [posters])
     const extendedSlides = useMemo(() => [slides[slides.length - 1], ...slides, slides[0]], [slides])
     const visibleSlide = (activeSlide - 1 + slides.length) % slides.length
+    const [isHovered, setIsHovered] = useState(false)
 
     useEffect(() => {
         if (slides.length <= 1) return
+        if (isHovered) return
 
         const intervalId = window.setInterval(() => {
             setActiveSlide((prev) => prev + 1)
         }, 3000)
 
         return () => window.clearInterval(intervalId)
-    }, [slides.length])
+    }, [slides.length, isHovered])
 
 
     const handleTransitionEnd = () => {
@@ -70,7 +72,7 @@ export function Hero({ posters }) {
     }
 
     return (
-        <section className="premier" aria-labelledby="premier-title">
+        <section className="premier" aria-labelledby="premier-title" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <div className="premier__window">
                 <div
                     className={`posters_list${isInstantMove ? ' posters_list--instant' : ''}`}
