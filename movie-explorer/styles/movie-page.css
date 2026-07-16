@@ -236,7 +236,7 @@ body:has(.theme-element:checked) .movie-page__details > p {
 }
 
 .movie-player {
-    gap: 24px;
+    gap: 0;
 }
 
 .movie-player__screen {
@@ -273,8 +273,8 @@ body:has(.theme-element:checked) .movie-player__screen {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
     height: 100%;
     gap: 16px;
     padding: 24px;
