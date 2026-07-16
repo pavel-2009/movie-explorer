@@ -20,35 +20,34 @@ export function MoviePlayer() {
   return (
     <main className="main-content movie-player" aria-labelledby="movie-player-title">
       <section className="movie-player__screen" aria-label={`Просмотр фильма ${movie.title}`}>
-        <img className="movie-player__backdrop" src={movie.backdrop} alt={`Постер фильма ${movie.title}`} />
-        <div className="movie-player__overlay" />
+        <div className="movie-player__poster">
+          <img className="movie-player__backdrop" src={movie.backdrop} alt={`Постер фильма ${movie.title}`} />
+          <button type="button" className="movie-player__play-button" aria-label={`Воспроизвести ${movie.title}`}>
+            <img src={playIcon} alt="" className="movie-player__play-icon" />
+          </button>
+          <div className="movie-player__overlay" />
+          <div className="movie-player__duration" aria-label="Длительность фильма">
+            {movie.duration}
+          </div>
+        </div>
 
         <div className="movie-player__content">
           <h1 className="movie-page__title movie-player__title" id="movie-player-title">
             {movie.title}
           </h1>
-          <div className="movie-page__meta movie-player__meta" aria-label="Информация о фильме">
-            <span>{movie.duration}</span>
-          </div>
+          <p className="movie-player__description">{movie.description}</p>
 
           <div className="movie-player__controls">
             <button type="button" className="movie-page__watch movie-player__button">
               <img src={playIcon} alt="" />
               Воспроизвести
             </button>
-            <Link to={`/movie/${slug}`} className="movie-player__link">
-              К описанию
-            </Link>
           </div>
-        </div>
-      </section>
 
-      <section className="movie-page__details movie-player__details" aria-label="Краткая информация о фильме">
-        <div>
-          <p className="movie-page__section-kicker">Смотреть</p>
-          <h2>Базовый просмотр без лишних блоков</h2>
+          <Link to={`/movie/${slug}`} className="movie-player__link">
+            К описанию
+          </Link>
         </div>
-        <p>{movie.description}</p>
       </section>
     </main>
   )
