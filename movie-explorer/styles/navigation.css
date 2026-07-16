@@ -44,6 +44,10 @@ body:has(.theme-element:checked) .bottom-nav__item {
     color: var(--primary);
 }
 
+.bottom-nav__item--active img {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(42%) saturate(1009%) hue-rotate(320deg) brightness(100%) contrast(96%);
+}
+
 
 .tablet-menu__backdrop {
     position: fixed;
@@ -172,9 +176,15 @@ body:has(.theme-element:checked) .aside-nav__link {
 }
 
 .aside-nav__link--active,
-.aside-nav__link:hover {
+.aside-nav__link:hover,
+.aside-nav__link:hover .aside-nav__logo {
     background: var(--panel-link-hover);
-    color: var(--text-primary);
+    color: var(--primary);
+}
+
+.aside-nav__link--active img,
+.aside-nav__link:hover img {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(42%) saturate(1009%) hue-rotate(320deg) brightness(100%) contrast(96%);
 }
 
 body:has(.theme-element:checked) .aside-nav__link--active,
