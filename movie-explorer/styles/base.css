@@ -45,6 +45,7 @@ main {
     display: grid;
     gap: 28px;
     margin: 0 auto;
+    padding-top: 12px;
 }
 
 .theme-element {
