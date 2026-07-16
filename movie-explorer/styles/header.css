@@ -18,6 +18,17 @@
 .head .menu-button {
     display: none;
     cursor: pointer;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.head .menu-button:hover,
+.head .menu-button:focus {
+    outline: none;
+    background: var(--primary);
+    transition: background 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px var(--primary);
 }
 
 .title {
