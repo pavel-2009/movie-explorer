@@ -23,7 +23,7 @@ export function TabletMenuPopup({ isOpen, onClose }) {
                 onClick={onClose}
             />
 
-            <aside className="tablet-menu" aria-label="Меню в планшетном режиме">
+            <aside className="tablet-menu tablet-menu--open" aria-label="Меню в планшетном режиме">
                 <div className="tablet-menu__top">
                     <a className="tablet-menu__logo title" href="#" aria-label="Movie Explorer">
                         <span className="title__first">Movie</span>

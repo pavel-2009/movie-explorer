@@ -55,11 +55,12 @@ body:has(.theme-element:checked) .bottom-nav__item {
 }
 
 .tablet-menu {
+    display: none;
+    
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
-    display: grid;
     width: min(320px, 86vw);
     height: 100vh;
     gap: 22px;
@@ -68,6 +69,10 @@ body:has(.theme-element:checked) .bottom-nav__item {
     background: var(--panel-bg-strong);
     box-shadow: var(--panel-shadow);
     backdrop-filter: blur(20px);
+}
+
+.tablet-menu--open {
+    display: grid;
 }
 
 .tablet-menu__top {
