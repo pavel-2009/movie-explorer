@@ -10,20 +10,16 @@ import chevronDownIcon from '../../assets/icons/chevron-down.svg'
 import { Link } from 'react-router-dom'
 
 export function TabletMenuPopup({ isOpen, onClose }) {
-    if (!isOpen) {
-        return null
-    }
-
     return (
         <>
             <button
                 type="button"
-                className="tablet-menu__backdrop"
+                className={`tablet-menu__backdrop${isOpen ? " tablet-menu__backdrop--visible" : ""}`}
                 aria-label="Закрыть меню"
                 onClick={onClose}
             />
 
-            <aside className="tablet-menu tablet-menu--open" aria-label="Меню в планшетном режиме">
+            <aside className={`tablet-menu${isOpen ? " tablet-menu--open" : ""}`} aria-label="Меню в планшетном режиме">
                 <div className="tablet-menu__top">
                     <a className="tablet-menu__logo title" href="#" aria-label="Movie Explorer">
                         <span className="title__first">Movie</span>
