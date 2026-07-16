@@ -45,6 +45,59 @@ body:has(.theme-element:checked) .bottom-nav__item {
 }
 
 
+.tablet-menu__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    border: 0;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(3px);
+}
+
+.tablet-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: grid;
+    width: min(320px, 86vw);
+    height: 100vh;
+    gap: 22px;
+    padding: 18px 16px 24px;
+    border-right: 1px solid var(--panel-border);
+    background: var(--panel-bg-strong);
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: blur(20px);
+}
+
+.tablet-menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tablet-menu__close {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid var(--panel-border);
+    border-radius: 50%;
+    background: var(--panel-bg);
+    color: var(--text-primary);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tablet-menu__logo {
+    display: grid;
+}
+
+.tablet-menu__nav {
+    display: grid;
+    gap: 10px;
+}
+
 .aside-nav {
     position: fixed;
     top: 28px;

@@ -12,6 +12,10 @@
         margin-right: 18px;
     }
 
+    .tablet-menu__backdrop {
+        display: block;
+    }
+
     .info-item.added {
         display: inline;
     }
