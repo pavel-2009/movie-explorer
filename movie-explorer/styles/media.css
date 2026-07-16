@@ -9,6 +9,7 @@
 
     .head .menu-button {
         display: grid;
+        margin-right: 18px;
     }
 
     .info-item.added {
