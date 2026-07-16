@@ -22,25 +22,26 @@ export function MoviePlayer() {
       <section className="movie-player__screen" aria-label={`Просмотр фильма ${movie.title}`}>
         <img className="movie-player__backdrop" src={movie.backdrop} alt={`Постер фильма ${movie.title}`} />
         <div className="movie-player__overlay" />
-      </section>
-      <div className="movie-player__content">
-        <h1 className="movie-page__title movie-player__title" id="movie-player-title">
-          {movie.title}
-        </h1>
-        <div className="movie-page__meta movie-player__meta" aria-label="Информация о фильме">
-          <span>{movie.duration}</span>
-        </div>
 
-        <div className="movie-player__controls">
-          <button type="button" className="movie-page__watch movie-player__button">
-            <img src={playIcon} alt="" />
-            Воспроизвести
-          </button>
-          <Link to={`/movie/${slug}`} className="movie-player__link">
-            К описанию
-          </Link>
+        <div className="movie-player__content">
+          <h1 className="movie-page__title movie-player__title" id="movie-player-title">
+            {movie.title}
+          </h1>
+          <div className="movie-page__meta movie-player__meta" aria-label="Информация о фильме">
+            <span>{movie.duration}</span>
+          </div>
+
+          <div className="movie-player__controls">
+            <button type="button" className="movie-page__watch movie-player__button">
+              <img src={playIcon} alt="" />
+              Воспроизвести
+            </button>
+            <Link to={`/movie/${slug}`} className="movie-player__link">
+              К описанию
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
       <section className="movie-page__details movie-player__details" aria-label="Краткая информация о фильме">
         <div>
