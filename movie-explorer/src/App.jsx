@@ -7,6 +7,7 @@ import { Sidebar } from './components/layout/Sidebar'
 import { Theme } from './components/layout/Theme'
 import { MoviePage } from './components/movie/MoviePage'
 import { MoviePlayer } from './components/movie/MoviePlayer'
+import { ProfilePage } from './components/profile/ProfilePage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<MainContent />} />
         <Route path="/movie/:slug" element={<MoviePage />} />
         <Route path="/watch/:slug" element={<MoviePlayer />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <BottomNavigation />
     </BrowserRouter>
