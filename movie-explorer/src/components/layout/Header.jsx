@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TabletMenuPopup } from "./TabletMenuPopup";
+import { Link } from "react-router-dom";
 
 export function Header() {
     const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -22,10 +23,12 @@ export function Header() {
                             <path d="M3 18H21" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <a className="title" href="#" aria-label="Movie Explorer">
-                        <span className="title__first">Movie</span>
-                        <span className="title__second">Explorer</span>
-                    </a>
+                    <Link className="app-header__logo title" to="/" aria-label="Movie Explorer">
+                        <div className="title" aria-label="Movie Explorer">
+                            <span className="title__first">Movie</span>
+                            <span className="title__second">Explorer</span>
+                        </div>
+                    </Link>
 
                     <div
                         className="search-trigger"

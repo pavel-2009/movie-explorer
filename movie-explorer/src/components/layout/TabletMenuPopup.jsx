@@ -21,10 +21,10 @@ export function TabletMenuPopup({ isOpen, onClose }) {
 
             <aside className={`tablet-menu${isOpen ? " tablet-menu--open" : ""}`} aria-label="Меню в планшетном режиме">
                 <div className="tablet-menu__top">
-                    <a className="tablet-menu__logo title" href="#" aria-label="Movie Explorer">
+                    <Link className="tablet-menu__logo title" to="/" onClick={onClose} aria-label="Movie Explorer">
                         <span className="title__first">Movie</span>
                         <span className="title__second">Explorer</span>
-                    </a>
+                    </Link>
                     <button type="button" className="tablet-menu__close" onClick={onClose} aria-label="Закрыть">
                         ✕
                     </button>

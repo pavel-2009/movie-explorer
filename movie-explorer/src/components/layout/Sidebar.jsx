@@ -12,10 +12,10 @@ import { Link } from 'react-router-dom'
 export function Sidebar() {
     return (
         <aside className="aside-nav" aria-label="Боковая навигация">
-            <a className="aside-nav__logo title" href="#" aria-label="Movie Explorer">
+            <Link className="aside-nav__logo title" to="/" aria-label="Movie Explorer">
                 <span className="title__first">Movie</span>
                 <span className="title__second">Explorer</span>
-            </a>
+            </Link>
             <div className="aside-nav__menu">
                 <Link className="aside-nav__link aside-nav__link--active" to="/">
                     <img src={homeIcon} alt="" />
