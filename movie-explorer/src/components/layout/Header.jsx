@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { TabletMenuPopup } from "./TabletMenuPopup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Header() {
     const [isSearchVisible, setIsSearchVisible] = useState(false);
     const [isTabletMenuOpen, setIsTabletMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSearchInput = (event) => {
+        const query = event.target.value.trim();
+        if (query.length > 0) {
+            navigate(`/films`, { state: { searchQuery: query } });
+        } else {
+            navigate("/");
+        }
+    }
 
     return (
         <>
@@ -35,7 +45,11 @@ export function Header() {
                         onMouseEnter={() => setIsSearchVisible(true)}
                         onMouseLeave={() => setIsSearchVisible(false)}
                     >
-                        <form action="/search" className={`search-form${isSearchVisible ? " search-form--visible" : ""}`}>
+                        <form
+                            action="/search" 
+                            className={`search-form${isSearchVisible ? " search-form--visible" : ""}`}
+                            onInput={handleSearchInput}
+                        >
                             <input type="text" placeholder="Поиск фильмов..." className="search-form__input" />
                         </form>
 
