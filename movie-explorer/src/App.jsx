@@ -9,6 +9,7 @@ import { Theme } from './components/layout/Theme'
 import { MoviePage } from './components/movie/MoviePage'
 import { MoviePlayer } from './components/movie/MoviePlayer'
 import { CategoryPage } from './components/movie/CategoryPage'
+import { ContinuePage } from './components/continue/ContinuePage'
 import { MyListPage } from './components/profile/MyListPage'
 import { ProfilePage } from './components/profile/ProfilePage'
 import { movies } from './data/homePageContent'
@@ -109,6 +110,7 @@ function App() {
         />
         <Route path="/movie/:slug" element={<MoviePage />} />
         <Route path="/watch/:slug" element={<MoviePlayer />} />
+        <Route path="/continue" element={<ContinuePage />} />
         <Route
           path="/my-list"
           element={
