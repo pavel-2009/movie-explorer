@@ -1,7 +1,24 @@
 import { MovieCard } from './MovieCard'
 import chevronRightIcon from '../../assets/icons/chevron-right.svg'
+import { useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 export function MovieList({ movies, favoriteSlugs, onToggleFavorite }) {
+    const location = useLocation();
+
+    const searchQuery = location.state?.searchQuery || '';
+
+    useEffect(() => {
+        if (searchQuery) {
+            const filteredMovies = movies.filter((movie) =>
+                movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+            setFilteredMovies(filteredMovies);
+        } else {
+            setFilteredMovies(movies);
+        }
+    }, [searchQuery, movies]);
+
     return (
         <section className="movie-list" aria-labelledby="popular-title">
                 <div className="section-title">
@@ -12,7 +29,7 @@ export function MovieList({ movies, favoriteSlugs, onToggleFavorite }) {
                     </a>
                 </div>
                 <div className="movie-list__items">
-                    {movies.map((movie) => (
+                    {filteredMovies.map((movie) => (
                         <MovieCard
                             key={movie.slug}
                             title={movie.title}
