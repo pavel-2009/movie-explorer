@@ -325,6 +325,7 @@ body:has(.theme-element:checked) .movie-card__title {
     border-radius: 14px;
     background: var(--card);
     box-shadow: var(--shadow-soft);
+    cursor: pointer;
 }
 
 body:has(.theme-element:checked) .continue-card {
@@ -363,6 +364,7 @@ body:has(.theme-element:checked) .continue-card::after {
     border-radius: 50%;
     background: rgba(8, 13, 21, 0.58);
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .continue-card__play img {
@@ -376,6 +378,10 @@ body:has(.theme-element:checked) .continue-card::after {
     bottom: 12px;
     left: 12px;
     z-index: 1;
+    background: rgba(2, 6, 13, 0.48);
+    box-shadow: 0 14px 30px rgba(2, 6, 13, 0.14);
+    border-radius: 12px;
+    padding: 8px 12px;
 }
 
 .continue-card__content h3,
@@ -384,6 +390,7 @@ body:has(.theme-element:checked) .continue-card::after {
 }
 
 .continue-card__content h3 {
+    color: #f8fafc;
     font-size: 13px;
 }
 
@@ -391,10 +398,6 @@ body:has(.theme-element:checked) .continue-card::after {
     margin-top: 3px;
     color: var(--text-muted);
     font-size: 11px;
-}
-
-body:has(.theme-element:checked) .continue-card__content p {
-    color: var(--day-text-muted);
 }
 
 .continue-card__progress {
