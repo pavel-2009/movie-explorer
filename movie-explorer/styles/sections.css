@@ -271,6 +271,39 @@ body:has(.theme-element:checked) .premier__item-watch.info {
     width: 100%;
 }
 
+.movie-card__favorite {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(2, 6, 13, 0.5);
+    box-shadow: 0 8px 24px rgba(2, 6, 13, 0.24);
+    cursor: pointer;
+}
+
+.movie-card__favorite img {
+    width: 14px;
+    height: 14px;
+}
+
+.movie-card__favorite--active {
+    background: rgba(245, 158, 11, 0.22);
+}
+
+body:has(.theme-element:checked) .movie-card__favorite {
+    background: rgba(255, 255, 255, 0.72);
+}
+
+body:has(.theme-element:checked) .movie-card__favorite--active {
+    background: rgba(245, 158, 11, 0.28);
+}
+
 .movie-card__link {
     display: block;
     width: 100%;

@@ -6,6 +6,8 @@ export function CategoryPage({
   eyebrow = 'Коллекция',
   title,
   description,
+  favoriteSlugs,
+  onToggleFavorite,
 }) {
   return (
     <main className={`main-content category-page category-page--${variant}`}>
@@ -24,6 +26,8 @@ export function CategoryPage({
               rating={movie.rating}
               imageUrl={movie.imageUrl}
               slug={movie.slug}
+              isFavorite={favoriteSlugs.includes(movie.slug)}
+              onToggleFavorite={onToggleFavorite}
             />
             <div className="category-page__details">
               <span>{movie.genre}</span>

@@ -1,7 +1,7 @@
 import { MovieCard } from './MovieCard'
 import chevronRightIcon from '../../assets/icons/chevron-right.svg'
 
-export function MovieList({ movies }) {
+export function MovieList({ movies, favoriteSlugs, onToggleFavorite }) {
     return (
         <section className="movie-list" aria-labelledby="popular-title">
                 <div className="section-title">
@@ -19,6 +19,8 @@ export function MovieList({ movies }) {
                             rating={movie.rating}
                             imageUrl={movie.imageUrl}
                             slug={movie.slug}
+                            isFavorite={favoriteSlugs.includes(movie.slug)}
+                            onToggleFavorite={onToggleFavorite}
                         />
                     ))}
                 </div>
